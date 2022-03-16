@@ -96,7 +96,7 @@ helpers.php 增加助手函数 event
 if (!function_exists('event')) {
     function event($event)
     {
-        \support\Event::dispatch($event);
+        \yzh52521\event\Event::dispatch($event);
     }
 }
 ```
