@@ -7,11 +7,17 @@
     {
       "name": "yzh52521",
       "email": "396751927@qq.com"
+    },
+    {
+        "name": "mouyong",
+        "email": "my24251325@gmail.com",
+        "homepage": "https://github.com/mouyong",
+        "role": "Developer"
     }
   ],
   "require": {
     "php": ">=7.2",
-    "illuminate/events": "^8.0"
+    "illuminate/events": "^8.0 || ^9.0"
   },
   "autoload": {
     "psr-4": {
