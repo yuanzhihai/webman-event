@@ -51,6 +51,6 @@ class Event implements Bootstrap
      */
     public static function __callStatic($name, $arguments)
     {
-        return self::$instance->{$name}(... $arguments);
+        return static::$instance->{$name}(... $arguments);
     }
 }
