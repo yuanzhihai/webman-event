@@ -13,17 +13,19 @@ composer require yzh52521/webman-event
 ```php
 return [
     'enable'      => true,
-    // 事件监听
-    'listener'    => [
-        app\events\Test::class => [
-            \app\listeners\TestListeners::class,
-        ],
-    ],
-
-    // 事件订阅器
-    'subscriber' => [
-       \app\subscribes\TestSubscribe::class,
-    ],
+    'event'       =>[
+            // 事件监听
+            'listener'    => [
+                app\events\Test::class => [
+                    \app\listeners\TestListeners::class,
+                ],
+            ],
+        
+            // 事件订阅器
+            'subscriber' => [
+               \app\subscribes\TestSubscribe::class,
+            ],
+    ]
 ];
 ```
 ## 快速开始
