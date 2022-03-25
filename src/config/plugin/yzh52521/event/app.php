@@ -1,9 +1,11 @@
 <?php
 
 return [
-    'enable'    => true,
-    'listener'  => [
-    ],
-    'subscribe' => [
-    ],
+    'enable' => true,
+    'event'  => [
+        'listener'  => [
+        ],
+        'subscribe' => [
+        ],
+    ]
 ];

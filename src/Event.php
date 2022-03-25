@@ -4,28 +4,27 @@ namespace yzh52521\event;
 
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
+use Webman\Bootstrap;
 
 /**
  * Class Event
  * @package yzh52521\event
  * @method static \Illuminate\Events\Dispatcher dispatch($event)
  */
-class Event
+class Event implements Bootstrap
 {
     /**
      * @var Dispatcher
      */
     protected static $instance = null;
 
-    /**
-     * @return Dispatcher|null
-     */
-    public static function instance()
+
+    public static function start($worker)
     {
-        if (!static::$instance) {
+        if ($worker) {
             $container        = new Container;
             static::$instance = new Dispatcher($container);
-            $eventsList       = config('plugin.yzh52521.event.app');
+            $eventsList       = config('plugin.yzh52521.event.app.event');
             if (isset($eventsList['listener']) && !empty($eventsList['listener'])) {
                 foreach ($eventsList['listener'] as $event => $listener) {
                     if (is_string($listener)) {
@@ -52,6 +51,6 @@ class Event
      */
     public static function __callStatic($name, $arguments)
     {
-        return self::instance()->{$name}(... $arguments);
+        return self::$instance->{$name}(... $arguments);
     }
 }
