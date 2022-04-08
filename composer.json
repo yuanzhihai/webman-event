@@ -16,7 +16,10 @@
   "autoload": {
     "psr-4": {
       "yzh52521\\event\\": "src/"
-    }
+    },
+    "files": [
+      "src/helper.php"
+    ]
   },
   "require-dev": {
     "workerman/webman": "^1.0"
