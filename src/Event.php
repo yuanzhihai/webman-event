@@ -9,7 +9,7 @@ use Webman\Bootstrap;
 /**
  * Class Event
  * @package yzh52521\event
- * @method static \Illuminate\Events\Dispatcher dispatch($event)
+ * @method static \Illuminate\Events\Dispatcher dispatch($event,$payload = [], $halt = false)
  */
 class Event implements Bootstrap
 {
