@@ -16,7 +16,7 @@ return [
     'event'       =>[
             // 事件监听
             'listener'    => [
-                app\events\Test::class => [
+                'test' => [
                     \app\listeners\TestListeners::class,
                 ],
             ],
@@ -28,8 +28,11 @@ return [
     ]
 ];
 ```
+
 ## 快速开始
+
 事件类：Test
+
 ```php
 namespace app\events;
 
@@ -43,7 +46,9 @@ class Test
     }
 }
 ```
-监听类 
+
+监听类
+
 ```php
 namespace app\listeners;
 
@@ -67,7 +72,9 @@ class TestListeners
     }
 }
 ```
+
 订阅类
+
 ```php
 namespace app\subscribes;
 
@@ -90,22 +97,14 @@ class TestSubscribe
     }
 }
 ```
-helpers.php 增加助手函数 event
-```
-**
- * @param $event
- */
-if (!function_exists('event')) {
-    function event($event)
-    {
-        \yzh52521\event\Event::dispatch($event);
-    }
-}
-```
 
 调用触发事件
+
 ```
-event(new Test('event data'));
+
+event(new Test('event data')); 
+or
+event('test',[new Test('event data')]);
 ```
 
 
