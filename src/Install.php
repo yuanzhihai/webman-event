@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\event;
+namespace yuan\event;
 
 class Install
 {
@@ -10,7 +10,7 @@ class Install
      * @var array
      */
     protected static $pathRelation = array(
-        'config/plugin/yzh52521/event' => 'config/plugin/yzh52521/event',
+        'config/plugin/yuan/event' => 'config/plugin/yuan/event',
     );
 
     /**

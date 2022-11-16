@@ -1,5 +1,5 @@
 {
-  "name": "yzh52521/webman-event",
+  "name": "yuan/webman-event",
   "description": "Use event in webman Framework, The Laravel EventDispatcher component implements library.",
   "type": "library",
   "license": "Apache-2.0",
@@ -15,7 +15,7 @@
   },
   "autoload": {
     "psr-4": {
-      "yzh52521\\event\\": "src/"
+      "yuan\\event\\": "src/"
     },
     "files": [
       "src/helper.php"

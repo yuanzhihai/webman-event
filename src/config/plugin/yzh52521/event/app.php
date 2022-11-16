@@ -2,7 +2,7 @@
 
 return [
     'enable' => true,
-    'event'  => [
+    'events'  => [
         'listener'  => [
         ],
         'subscribe' => [
