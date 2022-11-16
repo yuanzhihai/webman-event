@@ -1,6 +1,6 @@
 <?php
 
-namespace yzh52521\event;
+namespace yuan\event;
 
 use Illuminate\Events\Dispatcher;
 use Illuminate\Container\Container;
@@ -8,7 +8,7 @@ use Webman\Bootstrap;
 
 /**
  * Class Event
- * @package yzh52521\event
+ * @package yuan\event
  * @method static \Illuminate\Events\Dispatcher dispatch($event,$payload=[], $halt=false)
  * @method static \Illuminate\Events\Dispatcher listen($events, $listener = null)
  */
@@ -25,7 +25,7 @@ class Event implements Bootstrap
         if ($worker) {
             $container        = new Container;
             static::$instance = new Dispatcher($container);
-            $eventsList       = config('plugin.yzh52521.event.app.events');
+            $eventsList       = config('plugin.yzh.event.app.events');
             if (isset($eventsList['listener']) && !empty($eventsList['listener'])) {
                 foreach ($eventsList['listener'] as $event => $listener) {
                     if (is_string($listener)) {

@@ -1,4 +1,4 @@
 <?php
 return [
-    \yzh52521\event\Event::class
+    \yuan\event\Event::class
 ];

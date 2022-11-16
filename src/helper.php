@@ -9,6 +9,6 @@ if (!function_exists('event')) {
      */
     function event($event, array $payload = [], bool $halt = false)
     {
-        \yzh52521\event\Event::dispatch($event, $payload, $halt);
+        \yuan\event\Event::dispatch($event, $payload, $halt);
     }
 }
