@@ -3,7 +3,7 @@
 ## 安装
 
 ```shell script
-composer require yuan/webman-event
+composer require yzh52521/webman-event
 ```
 
 ## 配置
