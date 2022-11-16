@@ -13,7 +13,7 @@ composer require yzh52521/webman-event
 ```php
 return [
     'enable'      => true,
-    'event'       =>[
+    'events'       =>[
             // 事件监听
             'listener'    => [
                 'test' => [
