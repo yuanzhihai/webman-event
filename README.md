@@ -3,12 +3,12 @@
 ## 安装
 
 ```shell script
-composer require yzh52521/webman-event
+composer require yuan/webman-event
 ```
 
 ## 配置
 
-事件配置文件 `config/plugin/yzh52521/event/app.php` 内容如下
+事件配置文件 `config/plugin/yuan/event/app.php` 内容如下
 
 ```php
 return [
